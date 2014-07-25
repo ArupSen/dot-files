@@ -45,12 +45,18 @@ call vundle#end()            " required
 " turn on line numbering
 set number
 
+" set relative number in order move with j and k without counting
+set relativenumber
+
 " get words to wrap rather than characters
 set wrap
 set linebreak
 
 " syntax highlighting on
 syntax on
+
+" to get clipboard to work while in tmux session
+set clipboard=unnamed
 
 " set the colorscheme
 " http://bytefluent.com/vivify/
@@ -105,6 +111,10 @@ set showmatch
 " remap the Esc key as it's too far away
 inoremap ii <esc>
 inoremap II <esc>
+
+" the chars , i and I have mappings so can be a bit slow
+" waiting for a possible next char i waiting for i
+set timeout timeoutlen=500 ttimeoutlen=100
 
 " Display keystrokes in statusline
 set showcmd
