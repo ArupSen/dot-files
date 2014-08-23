@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'Markdown-syntax'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
