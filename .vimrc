@@ -127,8 +127,13 @@ set cursorline
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 
+" set files with .md extension to be markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
 " Prevent ex mode being triggered
 nnoremap Q <nop>
 
 " Tab completion just like in the shell
 set wildmode=longest,list
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
