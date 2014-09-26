@@ -1,4 +1,4 @@
-" Plugin stuff
+" Vundle Plugin stuff
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -101,13 +101,13 @@ set autoread
 set ruler
 
 " Show matching brackets when cursor is over them
-set showmatch 
+set showmatch
 
 " mappings for shifting around windows without Ctrl-W
-:map ,j <C-w>j 
+:map ,j <C-w>j
 :map ,k <C-w>k
-:map ,l <C-w>l 
-:map ,h <C-w>h 
+:map ,l <C-w>l
+:map ,h <C-w>h
 
 " remap the Esc key as it's too far away
 inoremap ii <esc>
@@ -135,5 +135,13 @@ nnoremap Q <nop>
 
 " Tab completion just like in the shell
 set wildmode=longest,list
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
+
+" Show non-printing whitespace characters by default
+set list
+
+" automatically save and load folded regions
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
