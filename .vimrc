@@ -137,7 +137,7 @@ nnoremap Q <nop>
 set wildmode=longest,list
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,trail:·
 
 " Show non-printing whitespace characters by default
 set list
@@ -145,3 +145,11 @@ set list
 " automatically save and load folded regions
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
+
+" allow backspace to delete from where it usually cannot
+set backspace=indent,eol,start
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
