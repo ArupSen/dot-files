@@ -43,6 +43,9 @@ call vundle#end()            " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+" make sure that vim starts in utf-8 mode
+set encoding=utf-8
+
 " turn on line numbering
 set number
 
@@ -61,7 +64,7 @@ set clipboard=unnamed
 
 " set the colorscheme
 " http://bytefluent.com/vivify/
-colorscheme inkpot
+colorscheme wombat256
 
 " get out of vi compatible
 set nocompatible
@@ -138,6 +141,8 @@ set wildmode=longest,list
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬,trail:·
+" Invisible character colours
+highlight NonText guifg=#ccc
 
 " Show non-printing whitespace characters by default
 set list
