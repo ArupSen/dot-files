@@ -13,7 +13,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'Markdown-syntax'
-
+Plugin 'ctrlp.vim'
+Plugin 'Gundo'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -163,3 +164,6 @@ endif
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+" Open a new buffer without having to save unsaved changes
+set hidden
