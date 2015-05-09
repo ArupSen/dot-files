@@ -140,3 +140,6 @@ endif
 set hidden
 " Set the mapping for the Gundo plugin - default F5
 nnoremap <F5> :GundoToggle<CR>
+" Create a blank line but remain in normal mode
+map - o<Esc>
+map _ O<Esc>
