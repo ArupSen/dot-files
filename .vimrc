@@ -140,6 +140,13 @@ endif
 set hidden
 " Set the mapping for the Gundo plugin - default F5
 nnoremap <F5> :GundoToggle<CR>
+" set the <leader>
+let mapleader = ","
 " Create a blank line but remain in normal mode
-map - o<Esc>
-map _ O<Esc>
+nnoremap - o<Esc>
+nnoremap _ O<Esc>
+" change current word to UPPERCASE when in NORMAL and INSERT mode
+inoremap <c-u> <esc>vawUea
+nnoremap <c-u> viwU
+" open your ~/.vimrc file in a split
+nnoremap <leader>rc :vsplit $MYVIMRC<cr>
